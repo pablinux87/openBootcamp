@@ -1,0 +1,12 @@
+{
+  "name": "introduccion_a_javascript",
+  "version": "1.0.0",
+  "description": "Introduccion a JavaScript y utilizacion de NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pablo Ratero",
+  "license": "ISC"
+}
