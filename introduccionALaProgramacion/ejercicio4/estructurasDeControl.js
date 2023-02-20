@@ -21,75 +21,74 @@ Dependiendo del valor de la variable estacion se deberá mandar un mensaje por c
 También habrá que poner un default para cuando el valor de la variable no sea una estación.
 */
 
-
 // Para todos los puntos creo una función a fines de práctica solamente, pasando como parámetro el valor según enunciado
 // y la ejecuto en un console.log para ver por consola lo que retorna la misma.
 
 // condicional If
 
 function compare(numeroIf) {
-    if (numeroIf>0) return "Positivo"
-    else if (numeroIf<0) return "Negativo"
-    else return "Cero"
+  if (numeroIf > 0) return "Positivo";
+  else if (numeroIf < 0) return "Negativo";
+  else return "Cero";
 }
 
-console.log(compare(2)) // Positivo
+console.log(compare(2)); // Positivo
 
 // bucle While:
 
 function bucleW1(numeroWhile) {
-    while (numeroWhile<3) {
-        console.log(numeroWhile)
-        numeroWhile++
-    }
+  while (numeroWhile < 3) {
+    console.log(numeroWhile);
+    numeroWhile++;
+  }
 }
 
-bucleW1(0)
+bucleW1(0);
 
 // bucle Do While
 
 function bucleDW() {
-    let numeroWhile=3
-    do {
-        console.log(numeroWhile)
-        numeroWhile++
-    } while (numeroWhile<3)
+  let numeroWhile = 3;
+  do {
+    console.log(numeroWhile);
+    numeroWhile++;
+  } while (numeroWhile < 3);
 }
 
-bucleDW()
+bucleDW();
 
 // bucle For
 
-function bucleF(){
-    for (let numeroFor=0; numeroFor<=3; numeroFor++) {
-        console.log(numeroFor)
-    }
+function bucleF() {
+  for (let numeroFor = 0; numeroFor <= 3; numeroFor++) {
+    console.log(numeroFor);
+  }
 }
 
-bucleF()
+bucleF();
 
 // bucle Switch
 
-function bucleS(estacion){
-    estacion=estacion.toLowerCase()
-    switch (estacion) {
-        case 'verano':
-            console.log(`La estación ingresada es ${estacion}`)        
-            break;
-        case 'invierno':
-            console.log(`La estación ingresada es ${estacion}`)        
-            break;
-        case 'otoño':
-            console.log(`La estación ingresada es ${estacion}`)        
-            break;
-        case 'primavera':
-            console.log(`La estación ingresada es ${estacion}`)        
-            break;
-        default:
-            console.log(`${estacion} no es una estación válida`)
-            break;
-    }
+function bucleS(estacion) {
+  estacion = estacion.toLowerCase();
+  switch (estacion) {
+    case "verano":
+      console.log(`La estación ingresada es ${estacion}`);
+      break;
+    case "invierno":
+      console.log(`La estación ingresada es ${estacion}`);
+      break;
+    case "otoño":
+      console.log(`La estación ingresada es ${estacion}`);
+      break;
+    case "primavera":
+      console.log(`La estación ingresada es ${estacion}`);
+      break;
+    default:
+      console.log(`${estacion} no es una estación válida`);
+      break;
+  }
 }
 
-bucleS("VeRano") // La estación ingresada es verano
-bucleS("calor") // calor no es una estación válida
+bucleS("VeRano"); // La estación ingresada es verano
+bucleS("calor"); // calor no es una estación válida
