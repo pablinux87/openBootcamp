@@ -1,0 +1,27 @@
+.container {
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: antiquewhite;
+}
+
+.seccion {
+  background-color: darkslateblue;
+  margin: 20px;
+  padding: 10px;
+  text-align: center;
+}
+
+.parrafo {
+  margin: 20px;
+  padding: 20px;
+  background-color: rgb(116, 195, 226);
+  color: rgb(18, 51, 80);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+.hideslow {
+  opacity: 30%;
+}
