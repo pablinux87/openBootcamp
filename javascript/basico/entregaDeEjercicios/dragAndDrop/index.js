@@ -10,13 +10,14 @@
  */
 
 const secciones = document.querySelectorAll(".seccion");
-const parrafos = document.querySelectorAll(".parrafo");
+let parrafos = Array.from(document.querySelectorAll(".parrafo"));
 const plus = document.querySelector("#plus");
 
 parrafos.forEach((parrafo) => {
   parrafo.addEventListener("dragstart", (event) => {
     console.log("Estoy arrastrando el párrafo: " + parrafo.innerText);
     parrafo.classList.add("hideslow");
+    console.log(event);
     event.dataTransfer.setData("id", parrafo.id);
   });
 
@@ -43,12 +44,25 @@ secciones.forEach((seccion) => {
 });
 
 plus.addEventListener("click", (event) => {
-  // const parrafo_final = document.querySelectorAll(".parrafo").length + 1;
+  const parrafo_final = document.querySelectorAll(".parrafo").length + 1;
   const parrafo_nuevo = document.createElement("p"); // is a node
   parrafo_nuevo.innerHTML = `BLOQUE ${parrafo_final}`;
   parrafo_nuevo.classList.add("parrafo");
   parrafo_nuevo.id = `p${parrafo_final}`;
   parrafo_nuevo.setAttribute("draggable", "true");
-  secciones[0].appendChild(parrafo_nuevo);
+
   console.log("Agregandooo" + parrafo_nuevo);
+
+  secciones[0].appendChild(parrafo_nuevo);
+
+  parrafo_nuevo.addEventListener("dragstart", (event) => {
+    console.log("Estoy arrastrando el párrafo: " + parrafo_nuevo.innerText);
+    parrafo_nuevo.classList.add("hideslow");
+    event.dataTransfer.setData("id", parrafo_nuevo.id);
+  });
+
+  parrafo_nuevo.addEventListener("dragend", (event) => {
+    console.log("dragend", event);
+    parrafo_nuevo.classList.remove("hideslow");
+  });
 });
